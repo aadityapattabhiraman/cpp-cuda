@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/akugyo/GitHub/cpp-cuda/library/build",
+  "command": "/usr/bin/c++    -o CMakeFiles/tools.dir/tools.cpp.o -c /home/akugyo/GitHub/cpp-cuda/library/tools.cpp",
+  "file": "/home/akugyo/GitHub/cpp-cuda/library/tools.cpp",
+  "output": "CMakeFiles/tools.dir/tools.cpp.o"
+},
+{
+  "directory": "/home/akugyo/GitHub/cpp-cuda/library/build",
+  "command": "/usr/bin/c++    -o CMakeFiles/main.dir/main.cpp.o -c /home/akugyo/GitHub/cpp-cuda/library/main.cpp",
+  "file": "/home/akugyo/GitHub/cpp-cuda/library/main.cpp",
+  "output": "CMakeFiles/main.dir/main.cpp.o"
+}
+]

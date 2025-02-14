@@ -27,3 +27,14 @@ Organise modules into libraries
 
 Link libraries when building code  
 * c++ -std=c++17 main.cpp -L . -ltools -o main 
+
+#### Make Files
+* Cmake minimum requirements
+* projects
+
+* set standard
+* export compile commands (can be used to refer commands)
+
+* add library
+* add executeable
+* link libraries
