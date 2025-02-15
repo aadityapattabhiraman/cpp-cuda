@@ -38,3 +38,5 @@ Link libraries when building code
 * add library
 * add executeable
 * link libraries
+
+getting git config to work properly
