@@ -40,3 +40,4 @@ Link libraries when building code
 * link libraries
 
 getting git config to work properly
+trial
