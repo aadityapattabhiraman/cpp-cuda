@@ -1,6 +1,6 @@
 ## C++ Basic Concepts
 
-### 1. Output: `cout`
+### Output: `cout`
 
 In C++, the `cout` object is used to output data to the standard output (usually the console). It is part of the `<iostream>` library and works with the insertion operator (`<<`).
 
@@ -18,7 +18,7 @@ This will output `Hello, World!` to the console.
 
 ---
 
-### 2. Input: `cin`
+### Input: `cin`
 
 The `cin` object is used for input, also part of the `<iostream>` library. It works with the extraction operator (`>>`) and is commonly used to get data from the user through the console.
 
@@ -39,7 +39,7 @@ This allows the user to input a number, which is stored in the variable `num`.
 
 ---
 
-### 3. Initialization with `{}` (Brace Initialization)
+### Initialization with `{}` (Brace Initialization)
 
 In C++, brace initialization (`{}`) is a type of initialization that ensures type safety and helps avoid issues such as narrowing conversions. It will cause an error if the type of the variable does not match the type of the initializer.
 
@@ -55,7 +55,7 @@ With `{}`, there is no implicit type conversion, meaning any incompatible type a
 
 ---
 
-### 4. Functional Initialization
+### Functional Initialization
 
 Functional initialization, which uses parentheses `()`, can be used to initialize variables as well. However, it behaves differently from brace initialization in some cases, particularly when it involves type conversions.
 
@@ -71,7 +71,7 @@ Unlike `{}`, functional initialization can result in truncation of values if the
 
 ---
 
-### 5. `sizeof()`
+### `sizeof()`
 
 The `sizeof()` operator is used to determine the size, in bytes, of a variable or data type. It is a compile-time operator, meaning it is evaluated at compile time and does not require the program to execute.
 
@@ -91,7 +91,7 @@ This will print the size of the `int` and `double` types in bytes, depending on 
 
 ---
 
-### 6. `unsigned` and `signed`
+### `unsigned` and `signed`
 
 In C++, the `signed` and `unsigned` keywords modify the behavior of integer types.
 
@@ -106,7 +106,7 @@ signed int s = -10;   // -10 is stored as a signed integer
 
 ---
 
-### 7. `short` and `long` Data Types
+### `short` and `long` Data Types
 
 C++ provides several integer types that represent different ranges of values. The `short` and `long` keywords are used to modify the size of an integer.
 
@@ -138,7 +138,9 @@ Note: The size of `short`, `long`, and other integer types may vary depending on
 
 (Note: Sizes and ranges can vary based on system architecture.)
 
-### 1. **`auto` Keyword**
+---
+
+### `auto` Keyword
 
 In C++, the `auto` keyword is used to automatically deduce the type of a variable from its initializer expression. This simplifies code by removing the need to explicitly specify the type, especially when dealing with complex types such as iterators.
 
@@ -158,7 +160,7 @@ In the above example, the `auto` keyword allows the compiler to automatically de
 
 ---
 
-### 2. **Prefix and Postfix Operators**
+### Prefix and Postfix Operators
 
 In C++, prefix and postfix operators are used with increment (`++`) and decrement (`--`) operators to modify the value of a variable. These operators differ in when the operation occurs relative to the value of the expression.
 
@@ -188,7 +190,7 @@ In the example above:
 
 ---
 
-### 3. **Boolean Operators**
+### Boolean Operators
 
 Boolean operators are used to perform logical operations, often in conditions such as `if` statements or loops. C++ provides the following Boolean operators:
 
@@ -219,9 +221,9 @@ In the example above:
 
 ---
 
-### 4. **Relational and Logical Operators**
+### Relational and Logical Operators
 
-#### **Relational Operators**
+#### Relational Operators
 
 Relational operators are used to compare two values. These operators return a Boolean result (`true` or `false`) based on the comparison.
 
@@ -275,7 +277,9 @@ In the example above, the relational operators compare `a` and `b` and print the
 | `>=`      | Greater than or equal to | `5 >= 10`                  | `false`  |
 | `<=`      | Less than or equal to | `5 <= 10`                    | `true`   |
 
-### 1. **`std::endl`**
+--- 
+
+### `std::endl`
 
 In C++, `std::endl` is an I/O manipulator used to insert a newline character into the output stream and flush the output buffer. It is defined in the `<iostream>` library. The primary difference between `std::endl` and the newline character (`\n`) is that `std::endl` not only inserts a newline but also forces a flush of the output buffer, ensuring that the data is written immediately to the output (console, file, etc.).
 
@@ -301,7 +305,7 @@ In this example:
 
 ---
 
-### 2. **`std::flush`**
+### `std::flush`
 
 `std::flush` is another I/O manipulator used to flush the output buffer of an output stream. Unlike `std::endl`, `std::flush` does not insert a newline character. It simply forces the output buffer to be written to the console or file, ensuring that all buffered data is output immediately.
 
@@ -335,7 +339,9 @@ In this example:
 | Flushes Buffer    | Yes                               | Yes                              |
 | Usage             | Typically used when a newline is needed along with flushing | Used when only flushing is needed without a newline |
 
-### 1. **`std::setw`**
+--- 
+
+### `std::setw`
 
 `std::setw` is an I/O manipulator used to set the width of the next input/output field. It is part of the `<iomanip>` library. The `setw` manipulator specifies the width of the field in which the next value will be printed. If the value is shorter than the specified width, it will be padded with spaces (by default). If the value is longer than the specified width, the output will not be truncated.
 
@@ -363,7 +369,7 @@ In this example:
 
 ---
 
-### 2. **Right and Left Justified**
+### Right and Left Justified
 
 By default, output is right-justified when using `std::setw`. However, you can change the justification using the manipulators `std::left` and `std::right`.
 
@@ -393,7 +399,7 @@ In this example:
 
 ---
 
-### 3. **`std::boolalpha` and `std::noboolalpha`**
+### `std::boolalpha` and `std::noboolalpha`
 
 In C++, the `std::boolalpha` manipulator is used to control the output format of boolean values (`true` or `false`). By default, boolean values are printed as `1` (true) or `0` (false). When `std::boolalpha` is used, `true` and `false` are printed as strings instead.
 
@@ -424,7 +430,7 @@ In this example:
 
 ---
 
-### 4. **`std::scientific` and `std::fixed`**
+### `std::scientific` and `std::fixed`
 
 The `std::scientific` and `std::fixed` manipulators are used to control the format of floating-point numbers. These manipulators ensure that the numbers are displayed in either scientific or fixed-point notation.
 
@@ -456,7 +462,7 @@ In this example:
 
 ---
 
-### 5. **`limits` Library**
+### `limits` Library
 
 The `limits` library in C++ provides predefined constants and functions that allow you to retrieve the minimum and maximum values for various data types (e.g., integers, floating-point types).
 
