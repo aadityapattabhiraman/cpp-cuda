@@ -138,3 +138,140 @@ Note: The size of `short`, `long`, and other integer types may vary depending on
 
 (Note: Sizes and ranges can vary based on system architecture.)
 
+### 1. **`auto` Keyword**
+
+In C++, the `auto` keyword is used to automatically deduce the type of a variable from its initializer expression. This simplifies code by removing the need to explicitly specify the type, especially when dealing with complex types such as iterators.
+
+#### Example:
+```cpp
+#include <iostream>
+
+int main() {
+    auto x = 10;    // Automatically deduced as int
+    auto y = 3.14;  // Automatically deduced as double
+    std::cout << "x: " << x << ", y: " << y << std::endl;
+    return 0;
+}
+```
+
+In the above example, the `auto` keyword allows the compiler to automatically determine that `x` is of type `int` and `y` is of type `double`.
+
+---
+
+### 2. **Prefix and Postfix Operators**
+
+In C++, prefix and postfix operators are used with increment (`++`) and decrement (`--`) operators to modify the value of a variable. These operators differ in when the operation occurs relative to the value of the expression.
+
+- **Prefix (`++x` or `--x`)**: The value of the variable is modified before it is used in an expression.
+- **Postfix (`x++` or `x--`)**: The value of the variable is modified after it is used in an expression.
+
+#### Example:
+```cpp
+#include <iostream>
+
+int main() {
+    int x = 5;
+    int y = ++x;  // Prefix: x is incremented first, then assigned to y (x becomes 6, y becomes 6)
+    std::cout << "x: " << x << ", y: " << y << std::endl;
+    
+    int z = 5;
+    int w = z++;  // Postfix: z is assigned to w first, then incremented (z becomes 6, w becomes 5)
+    std::cout << "z: " << z << ", w: " << w << std::endl;
+    
+    return 0;
+}
+```
+
+In the example above:
+- In the prefix example (`++x`), `x` is incremented first, then its value is assigned to `y`.
+- In the postfix example (`z++`), `z` is assigned to `w` first, then `z` is incremented.
+
+---
+
+### 3. **Boolean Operators**
+
+Boolean operators are used to perform logical operations, often in conditions such as `if` statements or loops. C++ provides the following Boolean operators:
+
+- **`&&` (Logical AND)**: Returns `true` if both operands are true.
+- **`||` (Logical OR)**: Returns `true` if at least one of the operands is true.
+- **`!` (Logical NOT)**: Returns `true` if the operand is false, and `false` if the operand is true.
+
+#### Example:
+```cpp
+#include <iostream>
+
+int main() {
+    bool a = true;
+    bool b = false;
+
+    std::cout << "a && b: " << (a && b) << std::endl;  // Logical AND: false
+    std::cout << "a || b: " << (a || b) << std::endl;  // Logical OR: true
+    std::cout << "!a: " << !a << std::endl;            // Logical NOT: false
+
+    return 0;
+}
+```
+
+In the example above:
+- `a && b` evaluates to `false` because both operands are not true.
+- `a || b` evaluates to `true` because at least one operand is true.
+- `!a` evaluates to `false` because `a` is `true`.
+
+---
+
+### 4. **Relational and Logical Operators**
+
+#### **Relational Operators**
+
+Relational operators are used to compare two values. These operators return a Boolean result (`true` or `false`) based on the comparison.
+
+- **`==`**: Equal to. Returns `true` if both operands are equal.
+- **`!=`**: Not equal to. Returns `true` if both operands are not equal.
+- **`>`**: Greater than. Returns `true` if the left operand is greater than the right operand.
+- **`<`**: Less than. Returns `true` if the left operand is less than the right operand.
+- **`>=`**: Greater than or equal to. Returns `true` if the left operand is greater than or equal to the right operand.
+- **`<=`**: Less than or equal to. Returns `true` if the left operand is less than or equal to the right operand.
+
+#### Example:
+```cpp
+#include <iostream>
+
+int main() {
+    int a = 5;
+    int b = 10;
+    
+    std::cout << "a == b: " << (a == b) << std::endl;  // False
+    std::cout << "a != b: " << (a != b) << std::endl;  // True
+    std::cout << "a > b: " << (a > b) << std::endl;    // False
+    std::cout << "a < b: " << (a < b) << std::endl;    // True
+    std::cout << "a >= b: " << (a >= b) << std::endl;  // False
+    std::cout << "a <= b: " << (a <= b) << std::endl;  // True
+    
+    return 0;
+}
+```
+
+In the example above, the relational operators compare `a` and `b` and print the results:
+- `a == b` is `false` because `5` is not equal to `10`.
+- `a != b` is `true` because `5` is not equal to `10`.
+- `a > b` is `false` because `5` is less than `10`.
+- `a < b` is `true` because `5` is less than `10`.
+- `a >= b` is `false` because `5` is not greater than or equal to `10`.
+- `a <= b` is `true` because `5` is less than or equal to `10`.
+
+---
+
+### Summary Table
+
+| Operator  | Description           | Example                     | Result   |
+|-----------|-----------------------|-----------------------------|----------|
+| `&&`      | Logical AND           | `true && false`              | `false`  |
+| `||`      | Logical OR            | `true || false`              | `true`   |
+| `!`       | Logical NOT           | `!true`                      | `false`  |
+| `==`      | Equal to              | `5 == 10`                    | `false`  |
+| `!=`      | Not equal to          | `5 != 10`                    | `true`   |
+| `>`       | Greater than          | `5 > 10`                     | `false`  |
+| `<`       | Less than             | `5 < 10`                     | `true`   |
+| `>=`      | Greater than or equal to | `5 >= 10`                  | `false`  |
+| `<=`      | Less than or equal to | `5 <= 10`                    | `true`   |
+
